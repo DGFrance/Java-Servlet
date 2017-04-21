@@ -1,0 +1,14 @@
+package simpleServlet;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.ManagedBean;
+import javax.annotation.PostConstruct;
+
+
+@ManagedBean
+public class SimpleCrudbean {
+
+}

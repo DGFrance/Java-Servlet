@@ -1,0 +1,72 @@
+package simpleServlet;
+
+import javax.xml.ws.Response;
+
+import org.json.simple.JSONObject;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.SingleThreadModel;
+import javax.servlet.annotation.HttpConstraint;
+import javax.servlet.annotation.ServletSecurity;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+
+
+@WebServlet(description = "Simple Servlet", urlPatterns = { "/Servlet2" })
+public class StudentServlet extends HttpServlet implements javax.servlet.Servlet {
+	private static final long serialVersionUID = 1L;
+
+	public class Student {
+		private String name;
+		private int id;
+
+		public Student(String name, int id) {
+			super();
+			this.name = name;
+			this.id = id;
+		}
+	}
+
+	public class Json {
+		private List<Student> data;
+		private String message;
+
+		public Json(List<Student> data, String message) {
+			super();
+			this.data = data;
+			this.message = message;
+		}
+		
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Gson gsonPost = new GsonBuilder().create();
+		PrintWriter out = response.getWriter();
+		response.setContentType("application/json");
+		response.setCharacterEncoding("utf-8");
+		
+	}
+	
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+		throws ServletException, IOException {
+	
+	Gson gson = new GsonBuilder().create();
+	PrintWriter out = response.getWriter();
+	response.setContentType("application/json");
+	response.setCharacterEncoding("utf-8");
+	Student[] student = {new Student("aaa", 20),new Student("bbb", 50)};
+	   Json message = new Json (student , "hello from server");    
+	        String json = gson.toJson(message);
+	       out.write(json);
+	    }
+
+}

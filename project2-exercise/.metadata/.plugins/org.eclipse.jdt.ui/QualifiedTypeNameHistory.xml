@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.ir.RuntimeNode.Request"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
+<fullyQualifiedTypeName name="javax.annotation.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.ServletSecurity"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.HttpConstraint"/>
+<fullyQualifiedTypeName name="javax.servlet.SingleThreadModel"/>
+</qualifiedTypeNameHistroy>

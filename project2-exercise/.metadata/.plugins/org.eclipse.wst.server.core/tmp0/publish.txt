@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Apr 20 13:50:53 ICT 2017
+org.eclipse.jst.jee.server\:SimpleApplication=C\:\\Users\\Trainee\\Downloads\\apache-tomcat-7.0.77-windows-x64\\apache-tomcat-7.0.77\\wtpwebapps\\SimpleApplication
+org.eclipse.jst.jee.server\:SimpleServlet=C\:\\Users\\Trainee\\Downloads\\apache-tomcat-7.0.77-windows-x64\\apache-tomcat-7.0.77\\wtpwebapps\\SimpleServlet

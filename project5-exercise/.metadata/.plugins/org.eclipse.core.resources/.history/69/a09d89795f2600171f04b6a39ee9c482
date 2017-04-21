@@ -1,0 +1,47 @@
+package CrudBean;
+
+import java.io.IOException;
+import java.io.Serializable;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Book")
+public class Book implements Serializable {
+	private static final long serialVersionUID = 1L;
+       
+	private long id, isbn;
+    private String title,author,publisher,price;
+    
+    public Book(long id, long isbn, String title, String author, String publisher, String price) {
+		super();
+		this.id = id;
+		this.isbn = isbn;
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+		this.price = price;
+	}
+
+    public Long getId() { return id;}
+    public void setId(long id) {this.id = id;}
+    public Long getIsbn() { return isbn;}
+    public void setIsbn(long isbn) {this.isbn = isbn;}
+    
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		doGet(request, response);
+	}
+
+}

@@ -1,0 +1,24 @@
+package simpleServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//@WebServlet(description = "StudentServlet", urlPatterns = {"/StudentServlet"})
+//public class StudentServlet {
+		
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+		throws ServletException, IOException {
+	// TODO Auto-generated method stub
+	System.out.println("Test");
+	String searchTerm = request.getParameter("searchTerms");
+	PrintWriter writer = response.getWriter();
+	writer.println("This is <b>bold</b>");
+	writer.println("What you <i>Looking For . . . </i> " + searchTerm);
+
+}
+}

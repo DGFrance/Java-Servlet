@@ -1,0 +1,5 @@
+package simpleServlet;
+
+public class StudentArray {
+	List<String> stockList =  new ArrayList<String>();
+}
